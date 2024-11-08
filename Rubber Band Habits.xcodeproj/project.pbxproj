@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		618031EE2CDEA07200C8A3C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618031D52CDEA07000C8A3C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618031DC2CDEA07000C8A3C7;
+			remoteInfo = "Rubber Band Habits";
+		};
+		618031F82CDEA07200C8A3C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618031D52CDEA07000C8A3C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618031DC2CDEA07000C8A3C7;
+			remoteInfo = "Rubber Band Habits";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		618031DD2CDEA07000C8A3C7 /* Rubber Band Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubber Band Habits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		618031ED2CDEA07200C8A3C7 /* Rubber Band HabitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber Band HabitsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		618031F72CDEA07200C8A3C7 /* Rubber Band HabitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber Band HabitsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Rubber Band Habits";
+			sourceTree = "<group>";
+		};
+		618031F02CDEA07200C8A3C7 /* Rubber Band HabitsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Rubber Band HabitsTests";
+			sourceTree = "<group>";
+		};
+		618031FA2CDEA07200C8A3C7 /* Rubber Band HabitsUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Rubber Band HabitsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		618031DA2CDEA07000C8A3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031EA2CDEA07200C8A3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031F42CDEA07200C8A3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		618031D42CDEA07000C8A3C7 = {
+			isa = PBXGroup;
+			children = (
+				618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */,
+				618031F02CDEA07200C8A3C7 /* Rubber Band HabitsTests */,
+				618031FA2CDEA07200C8A3C7 /* Rubber Band HabitsUITests */,
+				618031DE2CDEA07000C8A3C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		618031DE2CDEA07000C8A3C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				618031DD2CDEA07000C8A3C7 /* Rubber Band Habits.app */,
+				618031ED2CDEA07200C8A3C7 /* Rubber Band HabitsTests.xctest */,
+				618031F72CDEA07200C8A3C7 /* Rubber Band HabitsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		618031DC2CDEA07000C8A3C7 /* Rubber Band Habits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618032012CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band Habits" */;
+			buildPhases = (
+				618031D92CDEA07000C8A3C7 /* Sources */,
+				618031DA2CDEA07000C8A3C7 /* Frameworks */,
+				618031DB2CDEA07000C8A3C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */,
+			);
+			name = "Rubber Band Habits";
+			packageProductDependencies = (
+			);
+			productName = "Rubber Band Habits";
+			productReference = 618031DD2CDEA07000C8A3C7 /* Rubber Band Habits.app */;
+			productType = "com.apple.product-type.application";
+		};
+		618031EC2CDEA07200C8A3C7 /* Rubber Band HabitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618032042CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band HabitsTests" */;
+			buildPhases = (
+				618031E92CDEA07200C8A3C7 /* Sources */,
+				618031EA2CDEA07200C8A3C7 /* Frameworks */,
+				618031EB2CDEA07200C8A3C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				618031EF2CDEA07200C8A3C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				618031F02CDEA07200C8A3C7 /* Rubber Band HabitsTests */,
+			);
+			name = "Rubber Band HabitsTests";
+			packageProductDependencies = (
+			);
+			productName = "Rubber Band HabitsTests";
+			productReference = 618031ED2CDEA07200C8A3C7 /* Rubber Band HabitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		618031F62CDEA07200C8A3C7 /* Rubber Band HabitsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618032072CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band HabitsUITests" */;
+			buildPhases = (
+				618031F32CDEA07200C8A3C7 /* Sources */,
+				618031F42CDEA07200C8A3C7 /* Frameworks */,
+				618031F52CDEA07200C8A3C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				618031F92CDEA07200C8A3C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				618031FA2CDEA07200C8A3C7 /* Rubber Band HabitsUITests */,
+			);
+			name = "Rubber Band HabitsUITests";
+			packageProductDependencies = (
+			);
+			productName = "Rubber Band HabitsUITests";
+			productReference = 618031F72CDEA07200C8A3C7 /* Rubber Band HabitsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		618031D52CDEA07000C8A3C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					618031DC2CDEA07000C8A3C7 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					618031EC2CDEA07200C8A3C7 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 618031DC2CDEA07000C8A3C7;
+					};
+					618031F62CDEA07200C8A3C7 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 618031DC2CDEA07000C8A3C7;
+					};
+				};
+			};
+			buildConfigurationList = 618031D82CDEA07000C8A3C7 /* Build configuration list for PBXProject "Rubber Band Habits" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 618031D42CDEA07000C8A3C7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 618031DE2CDEA07000C8A3C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				618031DC2CDEA07000C8A3C7 /* Rubber Band Habits */,
+				618031EC2CDEA07200C8A3C7 /* Rubber Band HabitsTests */,
+				618031F62CDEA07200C8A3C7 /* Rubber Band HabitsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		618031DB2CDEA07000C8A3C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031EB2CDEA07200C8A3C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031F52CDEA07200C8A3C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		618031D92CDEA07000C8A3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031E92CDEA07200C8A3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		618031F32CDEA07200C8A3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		618031EF2CDEA07200C8A3C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618031DC2CDEA07000C8A3C7 /* Rubber Band Habits */;
+			targetProxy = 618031EE2CDEA07200C8A3C7 /* PBXContainerItemProxy */;
+		};
+		618031F92CDEA07200C8A3C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618031DC2CDEA07000C8A3C7 /* Rubber Band Habits */;
+			targetProxy = 618031F82CDEA07200C8A3C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		618031FF2CDEA07200C8A3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		618032002CDEA07200C8A3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		618032022CDEA07200C8A3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rubber Band Habits/Preview Content\"";
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-Habits";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		618032032CDEA07200C8A3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rubber Band Habits/Preview Content\"";
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-Habits";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		618032052CDEA07200C8A3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-HabitsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubber Band Habits.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rubber Band Habits";
+			};
+			name = Debug;
+		};
+		618032062CDEA07200C8A3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-HabitsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubber Band Habits.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rubber Band Habits";
+			};
+			name = Release;
+		};
+		618032082CDEA07200C8A3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-HabitsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rubber Band Habits";
+			};
+			name = Debug;
+		};
+		618032092CDEA07200C8A3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4S2C2T64BH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-HabitsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rubber Band Habits";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		618031D82CDEA07000C8A3C7 /* Build configuration list for PBXProject "Rubber Band Habits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618031FF2CDEA07200C8A3C7 /* Debug */,
+				618032002CDEA07200C8A3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618032012CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band Habits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618032022CDEA07200C8A3C7 /* Debug */,
+				618032032CDEA07200C8A3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618032042CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band HabitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618032052CDEA07200C8A3C7 /* Debug */,
+				618032062CDEA07200C8A3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618032072CDEA07200C8A3C7 /* Build configuration list for PBXNativeTarget "Rubber Band HabitsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618032082CDEA07200C8A3C7 /* Debug */,
+				618032092CDEA07200C8A3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 618031D52CDEA07000C8A3C7 /* Project object */;
+}
