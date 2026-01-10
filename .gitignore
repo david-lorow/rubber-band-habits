@@ -1,0 +1,13 @@
+#Mac stuff
+.DS_Store
+
+#Xcode build artifacts
+DerivedData/
+build/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+#User stuff
+*.xcuserstate
+**/xcuserdata/
