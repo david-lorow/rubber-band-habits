@@ -1,4 +1,4 @@
-
+/* For reference
 import Foundation
 
 struct Habit: Identifiable, Codable, Hashable {
@@ -66,4 +66,4 @@ class Habitual: ObservableObject {
         }
     
 }
-
+*/

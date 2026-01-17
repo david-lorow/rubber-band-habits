@@ -1,22 +1,42 @@
 
 import SwiftUI
 
+//This is the beast, the true core of the app, where completions are done
 struct HabitView: View {
-    @Binding var habit: Habit
+    //@Binding var habit: Habit
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.modelContext) var modelContext
+    
+    var habit: Habit
+    
+    //Compute different counts for every frequency type
+    var dailyCount: Int {
+        habit.completions.filter {
+            Calendar.current.isDateInToday($0.date)
+        }.count
+    }
+    var weeklyCount: Int {
+        habit.completions.filter { Calendar.current.isDate($0.date, equalTo: Date(), toGranularity: .weekOfYear) }.count
+    }
+    var monthlyCount: Int {
+        habit.completions.filter { Calendar.current.isDate($0.date, equalTo: Date(), toGranularity: .month) }.count
+    }
+    
+    //Basic date information summarized for later
     let theMonth: Int = Calendar.current.component(.month, from: Date())
     let theYear: Int = Calendar.current.component(.year, from: Date())
+    
     @State private var towardsGoal: Double = 0
     @State private var percentMessage: String = ""
     @State private var showUndoAlert: Bool = false
     @State private var isAnimating = false
     
-
     var body: some View {
         VStack {
             Spacer()
             VStack {
                 Spacer()
+                //Month name
                 ZStack {
                     Rectangle()
                         .fill(colorScheme == .light ? Color(white: 0.95) : Color(white: 0.15))
@@ -26,13 +46,19 @@ struct HabitView: View {
                     Text(monthName(for: theMonth))
                         .font(.system(size: 40)).bold()
                 }
+                //Month view wrapped
                 ZStack {
                     Rectangle()
                         .fill(colorScheme == .light ? Color(white: 0.95) : Color(white: 0.15))
                         .frame(width: 350, height: 300)
                         .cornerRadius(10)
-                    MonthView(month: theMonth, year: theYear, completionDates: habit.completionDates, isGoodHabit: habit.good)
+                    
+                    MonthView(month: theMonth, year: theYear, completions: habit.completions, isGoodHabit: habit.good)
+                    /*For reference
+                     MonthView(month: theMonth, year: theYear, completionDates: habit.completionDates, isGoodHabit: habit.good)
+                     */
                 }
+                //Habit info
                 HStack(alignment: .firstTextBaseline) {
                     Text("\(String(format: "%.0f", towardsGoal))%")
                         .font(.system(size: 50)).bold()
@@ -42,15 +68,18 @@ struct HabitView: View {
                 }
                 ZStack() {
                     Button(action: {
-                        habit.incrementCompletion()
+                        @State var completion = Completion(date: Date(), habit: habit)
+                        habit.completions.append(completion)
+                        //habit.incrementCompletion()
                         percentCalculate()
+                        //Bounch animation
                         withAnimation(.interpolatingSpring(stiffness: 300, damping: 5)) {
                             isAnimating = true
-                                }
+                        }
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             isAnimating = false
-                            }
-                    }, label: {
+                        }
+                    }, label: {//Button label is +1
                         ZStack {
                             Circle()
                                 .fill(habit.good ? Color.green : Color.red)
@@ -61,13 +90,17 @@ struct HabitView: View {
                                 .foregroundColor(.white)
                         }
                     })
+                    //Here is the undo button
+                    //Rather than using geometry, I just did some
+                    //insane container placements
                     HStack{
                         Spacer()
                         Spacer()
                         Spacer()
-                        if !habit.undoUsedToday && habit.completionDates.contains(where: { Calendar.current.isDateInToday($0) }) {
+                        if(!habit.undoUsed(today: Date()) && habit.completions.contains(where: { Calendar.current.isDateInToday($0.date) })
+                        ) {
                             Button(action: {
-                                showUndoAlert = true  
+                                showUndoAlert = true
                             }, label: {
                                 ZStack {
                                     Image(systemName: "arrow.uturn.backward.circle.fill")
@@ -75,15 +108,18 @@ struct HabitView: View {
                                         .foregroundColor(.gray)
                                         .padding()
                                 }
-                            })
+                            })//Alert if user presses undo
                             .alert(isPresented: $showUndoAlert) {
                                 Alert(
                                     title: Text("Are you sure?"),
                                     message: Text("You can only undo once a day."),
                                     primaryButton: .destructive(Text("Undo")) {
-                                        habit.decrementCompletion()
-                                        percentCalculate()
-                                        habit.undoUsedToday = true
+                                        if(habit.doUndo(context: modelContext)) {
+                                            percentCalculate()
+                                        }
+                                        //habit.decrementCompletion()
+                                        //percentCalculate()
+                                        //habit.undoUsedToday = true
                                     },
                                     secondaryButton: .cancel()
                                 )
@@ -101,11 +137,11 @@ struct HabitView: View {
             }
         }
         .onAppear {
-            percentCalculate()
-            habit.startDailyCheck()
-        }
+         percentCalculate()
+         //habit.startDailyCheck()
+         }
     }
-
+    //Dictionary for ease with month identification
     let monthDictionary: [Int: String] = [
         1: "January",
         2: "February",
@@ -120,40 +156,41 @@ struct HabitView: View {
         11: "November",
         12: "December"
     ]
-
+    //Function for month identification
     func monthName(for month: Int) -> String {
         monthDictionary[month] ?? "Invalid month"
     }
-
+    
+    //This is just a way to track progress but it quickly sprialed into semantics
     func percentCalculate() {
         guard habit.goalFrequency > 0 else {
             switch habit.timescale {
             case "Daily":
-                towardsGoal = habit.dailyCount > 0 ? -100 : 100
+                towardsGoal = dailyCount > 0 ? -100 : 100
             case "Weekly":
-                towardsGoal = habit.weeklyCount > 0 ? -100 : 100
+                towardsGoal = weeklyCount > 0 ? -100 : 100
             case "Monthly":
-                towardsGoal = habit.monthlyCount > 0 ? -100 : 100
+                towardsGoal = monthlyCount > 0 ? -100 : 100
             default:
                 towardsGoal = 0
             }
             percentMessage = "At"
             return
         }
-
+        
         let progress: Double
         switch habit.timescale {
         case "Daily":
-            progress = Double(habit.dailyCount) / Double(habit.goalFrequency)
+            progress = Double(dailyCount) / Double(habit.goalFrequency)
         case "Weekly":
-            progress = Double(habit.weeklyCount) / Double(habit.goalFrequency)
+            progress = Double(weeklyCount) / Double(habit.goalFrequency)
         case "Monthly":
-            progress = Double(habit.monthlyCount) / Double(habit.goalFrequency)
+            progress = Double(monthlyCount) / Double(habit.goalFrequency)
         default:
             towardsGoal = 0
             return
         }
-
+        
         if habit.good {
             towardsGoal = progress * 100
             percentMessage = towardsGoal >= 100 ? "At" : "Towards"
@@ -172,6 +209,19 @@ struct HabitView: View {
 }
 
 #Preview {
+    let sampleHabit = Habit(
+        name: "Sample",
+        good: true,
+        hDescription: "A sample habit for previewing.",
+        timescale: "Daily",
+        goalFrequency: 1,
+    )
+    let sampleCompletion = Completion(date: Date(), habit: sampleHabit)
+    
+    sampleHabit.completions.append(sampleCompletion)
+    
+    return HabitView(habit: sampleHabit)
+    /*For reference
     @Previewable @State var sampleHabit = Habit(
         name: "Sample Habit",
         description: "A sample habit for previewing.",
@@ -181,5 +231,6 @@ struct HabitView: View {
     )
 
     return HabitView(habit: $sampleHabit)
+    */
 }
 

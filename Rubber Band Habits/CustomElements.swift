@@ -6,7 +6,6 @@ extension Color {
     static let OffWhite = Color(red: 0.92, green: 0.92, blue: 0.92)
     static let duskyViolet = Color(red: 131 / 255, green: 99 / 255, blue: 158 / 255)
     static let lightViolet = Color(red: 186/255, green: 149/255, blue: 213/255)
-    
 }
 
 #Preview {
@@ -19,6 +18,15 @@ extension Color {
                 Text("Light Violet")
                     .font(.title)
                     .foregroundStyle(Color.lightViolet)
+                
+                //Used in the calendar but for some reason I didn't
+                //preview it before
+                Text("Dark Gray")
+                    .font(.title)
+                    .foregroundStyle(Color.DarkGray)
+                Text("Off White")
+                    .font(.title)
+                    .foregroundStyle(Color.OffWhite)
             }
         }
     }

@@ -1,5 +1,6 @@
 
 import SwiftUI
+import SwiftData
 
 struct DayCell: View {
     var dayText: String
@@ -34,7 +35,8 @@ struct DayCell: View {
 struct MonthView: View {
     let month: Int
     let year: Int
-    let completionDates: [Date]
+    let completions: [Completion]
+    var completionDates: [Date] { completions.map {$0.date} }//Map dates
     let isGoodHabit: Bool
     
     let columns = Array(repeating: GridItem(.flexible(), spacing: 1), count: 7)
@@ -84,6 +86,16 @@ struct MonthView: View {
 }
 
 #Preview {
+    let exampleHabit = Habit(name: "Exercise", good: true, hDescription:"Daily exercise routine", timescale: "", goalFrequency: 5)
+    let completionOne = Completion(date: Calendar.current.date(from:DateComponents(year: 2026, month: 1, day: 1))!, habit:exampleHabit)
+    let completionTwo = Completion(date: Calendar.current.date(from:DateComponents(year: 2026, month: 1, day: 7))!, habit:exampleHabit)
+    let completionThree = Completion(date: Calendar.current.date(from:DateComponents(year: 2026, month: 1, day: 14))!, habit:exampleHabit)
+    exampleHabit.completions.append(contentsOf: [completionOne,completionTwo, completionThree])
+    
+    return MonthView(month: 1, year: 2026, completions: exampleHabit.completions, isGoodHabit: exampleHabit.good)
+    
+    
+    /* For reference
     let habit = Habit(
         name: "Exercise",
         description: "Daily exercise routine",
@@ -98,5 +110,6 @@ struct MonthView: View {
     )
     
     MonthView(month: 10, year: 2024, completionDates: habit.completionDates, isGoodHabit: habit.good)
+        */
 }
 

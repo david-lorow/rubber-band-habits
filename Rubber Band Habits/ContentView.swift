@@ -1,15 +1,15 @@
-
+//Shoutout to the Tahoe 26.2 update for improving my app's UI
 import SwiftUI
+import SwiftData
 
-
-
+//How each habit will present itself in the list
 struct HabitRowView: View {
-    @Binding var habit: Habit
-    
+    //@Binding var habit: Habit
+    @State var habit: Habit
     
     var body: some View {
         NavigationLink {
-            HabitView(habit: $habit)
+            HabitView(habit: habit)
                 .navigationTitle(habit.name)
         } label: {
             VStack(alignment: .leading) {
@@ -17,17 +17,18 @@ struct HabitRowView: View {
                     .foregroundStyle(habit.good ? .green : .red)
                     .font(.system(size: 20))
                     .bold()
-                if !habit.description.isEmpty {
+                //Adaptable view depending on whether a description is present
+                if !habit.hDescription.isEmpty {
                     ShowDescription(habit: habit)
                 }
             }
         }
     }
-
+    //A basic text item wrapped in a struct for easier mutability
     struct ShowDescription: View {
         var habit: Habit
         var body: some View {
-            Text(habit.description)
+            Text(habit.hDescription)
                 .font(.system(size: 15))
         }
     }
@@ -37,18 +38,21 @@ struct HabitRowView: View {
 
 
 struct ContentView: View {
-    @ObservedObject private var habit = Habitual()
+    //@ObservedObject private var habit = Habitual()
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \Habit.name) var habits: [Habit]
     @State private var showAddHabit = false
     @State private var showDeleteAlert = false
     @State private var itemToDelete: IndexSet?
-    @Environment(\.colorScheme) var colorScheme
-
+    
     var body: some View {
         NavigationStack {
+            //Basic list with deletion alert, "Alarm app" type UI
             List {
                 Section {
-                    ForEach(habit.items.indices, id: \.self) { index in
-                        HabitRowView(habit: $habit.items[index])
+                    ForEach(habits) { habit in
+                        HabitRowView(habit: habit)
                     }
                     .onDelete { indexSet in
                         itemToDelete = indexSet
@@ -65,7 +69,7 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     })
                     .sheet(isPresented: $showAddHabit) {
-                        AddHabitView(habit: habit)
+                        //AddHabitView(habit: habit)
                     }
                 }
             }
@@ -84,11 +88,14 @@ struct ContentView: View {
         }
         .tint(colorScheme == .light ? Color.duskyViolet : Color.lightViolet)
     }
-
+    //Translate offsets to objects and delete
     func deleteItems(at offsets: IndexSet) {
-        habit.items.remove(atOffsets: offsets)
+        for index in offsets {
+            let habit = habits[index]
+            modelContext.delete(habit)
+        }
+        //habit.items.remove(atOffsets: offsets)
     }
-     
 }
 
 
@@ -97,6 +104,19 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    //Simple in preview only container
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Habit.self, Completion.self, configurations: config)
+    let context = container.mainContext
+    
+    let exampleHabitOne = Habit(name: "Exercise", good: true, hDescription: "", timescale: "Weekly", goalFrequency: 5)
+    
+    let exampleHabitTwo = Habit(name: "Smoking", good: false, hDescription: "RAZ", timescale: "Daily", goalFrequency: 1)
+    
+    context.insert(exampleHabitOne)
+    context.insert(exampleHabitTwo)
+    
+    return ContentView()
+        .modelContainer(container)
 }
 

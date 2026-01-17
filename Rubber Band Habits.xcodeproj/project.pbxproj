@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B2E7AFBB2F1BF82C0072FE5B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB02F1BF82C0072FE5B /* AddHabitView.swift */; };
+		B2E7AFBC2F1BF82C0072FE5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB22F1BF82C0072FE5B /* ContentView.swift */; };
+		B2E7AFBD2F1BF82C0072FE5B /* CustomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */; };
+		B2E7AFBE2F1BF82C0072FE5B /* HabitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */; };
+		B2E7AFBF2F1BF82C0072FE5B /* HabitInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB52F1BF82C0072FE5B /* HabitInfoView.swift */; };
+		B2E7AFC02F1BF82C0072FE5B /* HabitStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */; };
+		B2E7AFC12F1BF82C0072FE5B /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB72F1BF82C0072FE5B /* HabitView.swift */; };
+		B2E7AFC22F1BF82C0072FE5B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB82F1BF82C0072FE5B /* MonthView.swift */; };
+		B2E7AFC32F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB92F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift */; };
+		B2E7AFC42F1BF82C0072FE5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E7AFAE2F1BF82C0072FE5B /* Preview Assets.xcassets */; };
+		B2E7AFC52F1BF82C0072FE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E7AFB12F1BF82C0072FE5B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		618031EE2CDEA07200C8A3C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +41,20 @@
 		618031DD2CDEA07000C8A3C7 /* Rubber Band Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubber Band Habits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		618031ED2CDEA07200C8A3C7 /* Rubber Band HabitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber Band HabitsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		618031F72CDEA07200C8A3C7 /* Rubber Band HabitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber Band HabitsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E7AFAE2F1BF82C0072FE5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2E7AFB02F1BF82C0072FE5B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		B2E7AFB12F1BF82C0072FE5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2E7AFB22F1BF82C0072FE5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElements.swift; sourceTree = "<group>"; };
+		B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitForm.swift; sourceTree = "<group>"; };
+		B2E7AFB52F1BF82C0072FE5B /* HabitInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitInfoView.swift; sourceTree = "<group>"; };
+		B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStorage.swift; sourceTree = "<group>"; };
+		B2E7AFB72F1BF82C0072FE5B /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		B2E7AFB82F1BF82C0072FE5B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		B2E7AFB92F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_Band_HabitsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Rubber Band Habits";
-			sourceTree = "<group>";
-		};
 		618031F02CDEA07200C8A3C7 /* Rubber Band HabitsTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Rubber Band HabitsTests";
@@ -75,7 +95,7 @@
 		618031D42CDEA07000C8A3C7 = {
 			isa = PBXGroup;
 			children = (
-				618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */,
+				B2E7AFBA2F1BF82C0072FE5B /* Rubber Band Habits */,
 				618031F02CDEA07200C8A3C7 /* Rubber Band HabitsTests */,
 				618031FA2CDEA07200C8A3C7 /* Rubber Band HabitsUITests */,
 				618031DE2CDEA07000C8A3C7 /* Products */,
@@ -92,6 +112,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B2E7AFAF2F1BF82C0072FE5B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7AFAE2F1BF82C0072FE5B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B2E7AFBA2F1BF82C0072FE5B /* Rubber Band Habits */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7AFAF2F1BF82C0072FE5B /* Preview Content */,
+				B2E7AFB12F1BF82C0072FE5B /* Assets.xcassets */,
+				B2E7AFB22F1BF82C0072FE5B /* ContentView.swift */,
+				B2E7AFB02F1BF82C0072FE5B /* AddHabitView.swift */,
+				B2E7AFB52F1BF82C0072FE5B /* HabitInfoView.swift */,
+				B2E7AFB72F1BF82C0072FE5B /* HabitView.swift */,
+				B2E7AFB82F1BF82C0072FE5B /* MonthView.swift */,
+				B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */,
+				B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */,
+				B2E7AFB92F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift */,
+				B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */,
+			);
+			path = "Rubber Band Habits";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +152,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				618031DF2CDEA07000C8A3C7 /* Rubber Band Habits */,
 			);
 			name = "Rubber Band Habits";
 			packageProductDependencies = (
@@ -212,6 +255,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E7AFC42F1BF82C0072FE5B /* Preview Assets.xcassets in Resources */,
+				B2E7AFC52F1BF82C0072FE5B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E7AFBB2F1BF82C0072FE5B /* AddHabitView.swift in Sources */,
+				B2E7AFBC2F1BF82C0072FE5B /* ContentView.swift in Sources */,
+				B2E7AFBD2F1BF82C0072FE5B /* CustomElements.swift in Sources */,
+				B2E7AFBE2F1BF82C0072FE5B /* HabitForm.swift in Sources */,
+				B2E7AFBF2F1BF82C0072FE5B /* HabitInfoView.swift in Sources */,
+				B2E7AFC02F1BF82C0072FE5B /* HabitStorage.swift in Sources */,
+				B2E7AFC12F1BF82C0072FE5B /* HabitView.swift in Sources */,
+				B2E7AFC22F1BF82C0072FE5B /* MonthView.swift in Sources */,
+				B2E7AFC32F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
