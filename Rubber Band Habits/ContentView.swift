@@ -69,7 +69,7 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     })
                     .sheet(isPresented: $showAddHabit) {
-                        //AddHabitView(habit: habit)
+                        AddHabitView()
                     }
                 }
             }
