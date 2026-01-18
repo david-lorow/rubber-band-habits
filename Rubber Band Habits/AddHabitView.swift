@@ -12,6 +12,7 @@ struct AddHabitView: View {
     @State private var hDescription: String = ""
     @State private var good: Bool = true
     @State private var goalFrequency: Double = 0
+    @State private var validHabit: Bool = false
     
     //@ObservedObject var habit: Habitual
     
@@ -34,9 +35,10 @@ struct AddHabitView: View {
                     TextField("Name", text: Binding(
                         get: { self.name },
                         set: { newValue in
-                            if newValue.count <= nameLimit {
+                            if ((newValue.count <= nameLimit) && (newValue.count > 0)) {
                                 self.name = newValue
-                            }
+                                validHabit = true
+                            }//I realized you can make nameless habits
                         }
                     ))
                     TextField("Description", text: $hDescription)
@@ -68,8 +70,12 @@ struct AddHabitView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        let habit = Habit(name: name, good: good, hDescription: hDescription, timescale: timescale, goalFrequency: Int(goalFrequency))
-                        modelContext.insert(habit)
+                        if(validHabit) {
+                            let habit = Habit(name: name, good: good, hDescription: hDescription, timescale: timescale, goalFrequency: Int(goalFrequency))
+                            modelContext.insert(habit)
+                            dismiss()
+                        }
+                        
                         /*
                         let item = Habit(name: name, description: description, good: good, goalFrequency: Int(goalFrequency), timescale: timescale)
                         habit.items.append(item)
