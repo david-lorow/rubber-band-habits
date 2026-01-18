@@ -14,8 +14,6 @@ struct AddHabitView: View {
     @State private var goalFrequency: Double = 0
     @State private var validHabit: Bool = false
     
-    //@ObservedObject var habit: Habitual
-    
     let timescales = ["Daily", "Weekly", "Monthly"]
     
     //Between these two, options in timescale frequency are translated into
@@ -75,19 +73,11 @@ struct AddHabitView: View {
                             modelContext.insert(habit)
                             dismiss()
                         }
-                        
-                        /*
-                        let item = Habit(name: name, description: description, good: good, goalFrequency: Int(goalFrequency), timescale: timescale)
-                        habit.items.append(item)
-                        presentationMode.wrappedValue.dismiss()
-                         */
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(role: .destructive, action: {
                         dismiss()
-                        //presentationMode.wrappedValue.dismiss()
-                        
                     }) {
                         Text("Cancel")
                     }
@@ -102,5 +92,4 @@ struct AddHabitView: View {
 
 #Preview {
     AddHabitView()
-    //AddHabitView(habit: Habitual())
 }

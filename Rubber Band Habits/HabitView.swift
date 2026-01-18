@@ -54,9 +54,6 @@ struct HabitView: View {
                         .cornerRadius(10)
                     
                     MonthView(month: theMonth, year: theYear, completions: habit.completions, isGoodHabit: habit.good)
-                    /*For reference
-                     MonthView(month: theMonth, year: theYear, completionDates: habit.completionDates, isGoodHabit: habit.good)
-                     */
                 }
                 //Habit info
                 HStack(alignment: .firstTextBaseline) {
@@ -70,9 +67,8 @@ struct HabitView: View {
                     Button(action: {
                         @State var completion = Completion(date: Date(), habit: habit)
                         habit.completions.append(completion)
-                        //habit.incrementCompletion()
                         percentCalculate()
-                        //Bounch animation
+                        //Bounce animation
                         withAnimation(.interpolatingSpring(stiffness: 300, damping: 5)) {
                             isAnimating = true
                         }
@@ -117,9 +113,6 @@ struct HabitView: View {
                                         if(habit.doUndo(context: modelContext)) {
                                             percentCalculate()
                                         }
-                                        //habit.decrementCompletion()
-                                        //percentCalculate()
-                                        //habit.undoUsedToday = true
                                     },
                                     secondaryButton: .cancel()
                                 )
@@ -138,7 +131,6 @@ struct HabitView: View {
         }
         .onAppear {
          percentCalculate()
-         //habit.startDailyCheck()
          }
     }
     //Dictionary for ease with month identification
@@ -221,16 +213,5 @@ struct HabitView: View {
     sampleHabit.completions.append(sampleCompletion)
     
     return HabitView(habit: sampleHabit)
-    /*For reference
-    @Previewable @State var sampleHabit = Habit(
-        name: "Sample Habit",
-        description: "A sample habit for previewing.",
-        good: true,
-        goalFrequency: 0,
-        timescale: "Monthly"
-    )
-
-    return HabitView(habit: $sampleHabit)
-    */
 }
 

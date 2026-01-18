@@ -75,9 +75,9 @@ struct ProgressWidget: View {
     var dailyCount: Int
     var weeklyCount: Int
     var monthlyCount: Int
-    
-    //@State private var doingGood: Bool = false
-    
+
+    //This used to be a function with .onAppear and stuff
+    //But a computed variable is just so nice
     var doingGood: Bool {
         //First the count that matters for measuring progress is based on
         //the timescale the user had selected
@@ -127,16 +127,7 @@ struct ProgressWidget: View {
                 .font(.system(size: 30)).bold()
                 .foregroundStyle(colorScheme == .light ? Color.duskyViolet : Color.lightViolet)
         }
-        //.onAppear {
-        //    getProgress()
-        //}
     }
-
-    
-    //This function just checks progress based on the goal frequency
-    //func getProgress() {
-    //}
-    //I think having a State variable, and .opAppear, and this function, is a bit much
 }
 
 
@@ -211,16 +202,5 @@ struct HabitInfoView: View {
     sampleHabit.completions.append(sampleCompletion)
     
     return HabitInfoView(habit: sampleHabit)
-    
-    /*For reference
-    let sampleHabit = Habit(
-        name: "Sample",
-        description: "A sample habit for previewing.",
-        good: true,
-        goalFrequency: 5,
-        timescale: "Monthly"
-    )
-    HabitInfoView(habit: sampleHabit)
-     */
 }
 

@@ -10,7 +10,6 @@
 		B2E7AFBB2F1BF82C0072FE5B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB02F1BF82C0072FE5B /* AddHabitView.swift */; };
 		B2E7AFBC2F1BF82C0072FE5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB22F1BF82C0072FE5B /* ContentView.swift */; };
 		B2E7AFBD2F1BF82C0072FE5B /* CustomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */; };
-		B2E7AFBE2F1BF82C0072FE5B /* HabitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */; };
 		B2E7AFBF2F1BF82C0072FE5B /* HabitInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB52F1BF82C0072FE5B /* HabitInfoView.swift */; };
 		B2E7AFC02F1BF82C0072FE5B /* HabitStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */; };
 		B2E7AFC12F1BF82C0072FE5B /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7AFB72F1BF82C0072FE5B /* HabitView.swift */; };
@@ -46,7 +45,6 @@
 		B2E7AFB12F1BF82C0072FE5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2E7AFB22F1BF82C0072FE5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElements.swift; sourceTree = "<group>"; };
-		B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitForm.swift; sourceTree = "<group>"; };
 		B2E7AFB52F1BF82C0072FE5B /* HabitInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitInfoView.swift; sourceTree = "<group>"; };
 		B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStorage.swift; sourceTree = "<group>"; };
 		B2E7AFB72F1BF82C0072FE5B /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				B2E7AFB62F1BF82C0072FE5B /* HabitStorage.swift */,
 				B2E7AFB32F1BF82C0072FE5B /* CustomElements.swift */,
 				B2E7AFB92F1BF82C0072FE5B /* Rubber_Band_HabitsApp.swift */,
-				B2E7AFB42F1BF82C0072FE5B /* HabitForm.swift */,
 			);
 			path = "Rubber Band Habits";
 			sourceTree = "<group>";
@@ -284,7 +281,6 @@
 				B2E7AFBB2F1BF82C0072FE5B /* AddHabitView.swift in Sources */,
 				B2E7AFBC2F1BF82C0072FE5B /* ContentView.swift in Sources */,
 				B2E7AFBD2F1BF82C0072FE5B /* CustomElements.swift in Sources */,
-				B2E7AFBE2F1BF82C0072FE5B /* HabitForm.swift in Sources */,
 				B2E7AFBF2F1BF82C0072FE5B /* HabitInfoView.swift in Sources */,
 				B2E7AFC02F1BF82C0072FE5B /* HabitStorage.swift in Sources */,
 				B2E7AFC12F1BF82C0072FE5B /* HabitView.swift in Sources */,
@@ -467,8 +463,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "Rubber-Band-Habits";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-Habits";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -501,8 +497,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "Rubber-Band-Habits";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BigDave.Rubber-Band-Habits";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

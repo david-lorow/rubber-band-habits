@@ -85,6 +85,11 @@ struct MonthView: View {
     }
 }
 
+///At some point in the future, I would like to upgrade this aspect of the app
+///It is the most visually striking visual in the app, but also, incredibly generic
+///That is why it is mostly coded by ChatGPT, simple and unimaginative
+///It works, but eventually, I would like to give it a personal touch up
+
 #Preview {
     let exampleHabit = Habit(name: "Exercise", good: true, hDescription:"Daily exercise routine", timescale: "", goalFrequency: 5)
     let completionOne = Completion(date: Calendar.current.date(from:DateComponents(year: 2026, month: 1, day: 1))!, habit:exampleHabit)
@@ -94,22 +99,5 @@ struct MonthView: View {
     
     return MonthView(month: 1, year: 2026, completions: exampleHabit.completions, isGoodHabit: exampleHabit.good)
     
-    
-    /* For reference
-    let habit = Habit(
-        name: "Exercise",
-        description: "Daily exercise routine",
-        good: true,
-        goalFrequency: 5,
-        completionDates: [
-            Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 3))!,
-            Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 7))!,
-            Calendar.current.date(from: DateComponents(year: 2024, month: 10, day: 15))!
-        ],
-        timescale: ""
-    )
-    
-    MonthView(month: 10, year: 2024, completionDates: habit.completionDates, isGoodHabit: habit.good)
-        */
 }
 

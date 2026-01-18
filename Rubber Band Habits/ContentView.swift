@@ -4,7 +4,6 @@ import SwiftData
 
 //How each habit will present itself in the list
 struct HabitRowView: View {
-    //@Binding var habit: Habit
     @State var habit: Habit
     
     var body: some View {
